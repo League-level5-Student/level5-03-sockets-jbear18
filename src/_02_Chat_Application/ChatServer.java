@@ -100,7 +100,17 @@ public class ChatServer extends Thread{
 	}
 	
 	public static void main(String[] args) {
-
+		
+		Thread t = new Thread(() -> {
+			try {
+				ChatServer sg = new ChatServer(8080, app);
+				sg.start();
+			} catch (IOException e) {
+				System.out.println("ERROR!");
+				e.printStackTrace();
+			}
+		});
+		t.start();
 		}
 	}
 	

@@ -14,9 +14,7 @@ public class ChatClient {
 	private String passwordEnter;
 	private ChatApp app;
 	
-//	private ServerSocket serverSocket;
-//	private Socket connection;
-	
+
 DataOutputStream os;
 DataInputStream is;
 	
@@ -37,7 +35,7 @@ DataInputStream is;
 			
 			
 				app.setVisible(true);
-				System.out.println("Passowrd Is Correct");
+				System.out.println("Password Is Correct");
 				
 			while(s.isConnected()) {
 				try {
@@ -51,7 +49,7 @@ DataInputStream is;
 			System.out.println(message);
 			s.close();
 		} catch(IOException e) {
-			JOptionPane.showMessageDialog(null, "Connect was lost");
+			JOptionPane.showMessageDialog(null, "Connection was lost");
 			System.out.println("Error occurred");
 			e.printStackTrace();
 		}

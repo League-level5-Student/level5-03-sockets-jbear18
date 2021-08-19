@@ -84,7 +84,7 @@ public class ChatApp extends JFrame implements KeyListener{
 			
 			setTitle("Server");
 			password = JOptionPane.showInputDialog("Please create a server passcode");
-			JOptionPane.showMessageDialog(null, "Server started at: " + Server.getIPAddress() + "\nPort: " + server.getPort());
+			JOptionPane.showMessageDialog(null, "Server started at: " + server.getIPAddress() + "\nPort: " + server.getPort());
 			textField.addKeyListener(this);
 			System.out.println(password);
 			
@@ -164,7 +164,7 @@ public class ChatApp extends JFrame implements KeyListener{
 		StyleContext sc = StyleContext.getDefaultStyleContext();
 		AttributeSet aset = sc.addAttribute(SimpleAttributeSet.EMPTY, StyleConstants.Foreground, Color.BLACK);
 		
-		 aset = sc.addAttribute( aset, StyleConstants.FontFamily, "Arial" );
+		 aset = sc.addAttribute( aset, StyleConstants.FontFamily, "Georgia" );
 	     aset = sc.addAttribute( aset, StyleConstants.Alignment, StyleConstants.ALIGN_JUSTIFIED );
 	     aset = sc.addAttribute( aset, StyleConstants.Background, bgColor );
 	     aset = sc.addAttribute( aset, StyleConstants.FontSize, 18 );
@@ -175,7 +175,4 @@ public class ChatApp extends JFrame implements KeyListener{
 	     tp.replaceSelection( message );
 	}
 	
-//	public ChatServer(int stream) {
-//		this.port = port;
-//	}
 }
